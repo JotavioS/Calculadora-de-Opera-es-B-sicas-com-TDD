@@ -15,6 +15,7 @@ class Calculator {
 
     // Subtrai o segundo número do primeiro e retorna o resultado
     subtract(a, b) {
+        this.#validateInputs(a, b); // Valida os tipos dos argumentos
         return a - b; // Retorna a subtração de a por b
     }
 }

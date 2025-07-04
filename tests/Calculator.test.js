@@ -29,4 +29,10 @@ describe('Calculator', () => {
         expect(calculator.subtract(-1, -1)).toBe(0); // Testa subtração de números negativos
         expect(calculator.subtract(0, 5)).toBe(-5); // Testa subtração com resultado negativo
     });
+
+    // Testa se a subtração lança erro para argumentos não numéricos
+    test('deve lançar TypeError para entradas não numéricas na subtração', () => {
+        expect(() => calculator.subtract('5', 3)).toThrow('Os argumentos devem ser números'); // Testa subtração com string
+        expect(() => calculator.subtract(5, null)).toThrow('Os argumentos devem ser números'); // Testa subtração com null
+    });
 });
