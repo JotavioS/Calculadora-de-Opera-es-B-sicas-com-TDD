@@ -1,0 +1,14 @@
+{
+  "name": "calculadora-tdd",
+  "version": "1.0.0",
+  "description": "Calculadora com TDD em JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "jotavio",
+  "devDependencies": {
+    "jest": "^30.0.4"
+  }
+}
