@@ -1,5 +1,5 @@
 // Importa a classe Calculator para os testes
-const Calculator = require('./Calculator');
+const Calculator = require('../Calculator');
 
 // Descreve o conjunto de testes para a classe Calculator
 describe('Calculator', () => {
