@@ -12,6 +12,11 @@ class Calculator {
         this.#validateInputs(a, b); // Valida os tipos dos argumentos
         return a + b;
     }
+
+    // Subtrai o segundo número do primeiro e retorna o resultado
+    subtract(a, b) {
+        return a - b; // Retorna a subtração de a por b
+    }
 }
 
 // Exporta a classe para uso em outros arquivos
