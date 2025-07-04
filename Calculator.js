@@ -24,6 +24,11 @@ class Calculator {
         this.#validateInputs(a, b); // Valida os tipos dos argumentos
         return a * b; // Retorna o produto de a e b
     }
+
+    // Divide o primeiro número pelo segundo e retorna o resultado
+    divide(a, b) {
+        return a / b; // Retorna o resultado da divisão
+    }
 }
 
 // Exporta a classe para uso em outros arquivos
