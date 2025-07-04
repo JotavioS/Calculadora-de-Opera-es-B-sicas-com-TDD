@@ -22,4 +22,11 @@ describe('Calculator', () => {
         expect(() => calculator.sum('2', 3)).toThrow('Os argumentos devem ser números'); // Testa soma com string
         expect(() => calculator.sum(null, 3)).toThrow('Os argumentos devem ser números'); // Testa soma com null
     });
+
+    // Testa a funcionalidade de subtração com diferentes casos
+    test('deve subtrair dois números corretamente', () => {
+        expect(calculator.subtract(5, 3)).toBe(2); // Testa subtração de números positivos
+        expect(calculator.subtract(-1, -1)).toBe(0); // Testa subtração de números negativos
+        expect(calculator.subtract(0, 5)).toBe(-5); // Testa subtração com resultado negativo
+    });
 });
