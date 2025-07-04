@@ -35,4 +35,11 @@ describe('Calculator', () => {
         expect(() => calculator.subtract('5', 3)).toThrow('Os argumentos devem ser números'); // Testa subtração com string
         expect(() => calculator.subtract(5, null)).toThrow('Os argumentos devem ser números'); // Testa subtração com null
     });
+
+    // Testa a funcionalidade de multiplicação com diferentes casos
+    test('deve multiplicar dois números corretamente', () => {
+        expect(calculator.multiply(2, 3)).toBe(6); // Testa multiplicação de números positivos
+        expect(calculator.multiply(-2, 3)).toBe(-6); // Testa multiplicação com número negativo
+        expect(calculator.multiply(0, 5)).toBe(0); // Testa multiplicação por zero
+    });
 });
