@@ -42,4 +42,10 @@ describe('Calculator', () => {
         expect(calculator.multiply(-2, 3)).toBe(-6); // Testa multiplicação com número negativo
         expect(calculator.multiply(0, 5)).toBe(0); // Testa multiplicação por zero
     });
+
+    // Testa se a multiplicação lança erro para argumentos não numéricos
+    test('deve lançar TypeError para entradas não numéricas na multiplicação', () => {
+        expect(() => calculator.multiply('2', 3)).toThrow('Os argumentos devem ser números'); // Testa multiplicação com string
+        expect(() => calculator.multiply(undefined, 3)).toThrow('Os argumentos devem ser números'); // Testa multiplicação com undefined
+    });
 });

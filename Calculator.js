@@ -21,6 +21,7 @@ class Calculator {
 
     // Multiplica dois números e retorna o resultado
     multiply(a, b) {
+        this.#validateInputs(a, b); // Valida os tipos dos argumentos
         return a * b; // Retorna o produto de a e b
     }
 }
