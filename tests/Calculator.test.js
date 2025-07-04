@@ -48,4 +48,11 @@ describe('Calculator', () => {
         expect(() => calculator.multiply('2', 3)).toThrow('Os argumentos devem ser números'); // Testa multiplicação com string
         expect(() => calculator.multiply(undefined, 3)).toThrow('Os argumentos devem ser números'); // Testa multiplicação com undefined
     });
+
+    // Testa a funcionalidade de divisão com diferentes casos
+    test('deve dividir dois números corretamente', () => {
+        expect(calculator.divide(6, 2)).toBe(3); // Testa divisão de números positivos
+        expect(calculator.divide(-6, 2)).toBe(-3); // Testa divisão com número negativo
+        expect(calculator.divide(0, 5)).toBe(0); // Testa divisão de zero
+    });
 });
