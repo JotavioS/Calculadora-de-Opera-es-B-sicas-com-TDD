@@ -55,4 +55,15 @@ describe('Calculator', () => {
         expect(calculator.divide(-6, 2)).toBe(-3); // Testa divisão com número negativo
         expect(calculator.divide(0, 5)).toBe(0); // Testa divisão de zero
     });
+
+    // Testa se a divisão por zero lança a exceção esperada
+    test('deve lançar erro ao dividir por zero', () => {
+        expect(() => calculator.divide(10, 0)).toThrow('Divisão por zero não é permitida');
+    });
+
+    // Testa se a divisão lança erro para argumentos não numéricos
+    test('deve lançar TypeError para entradas não numéricas na divisão', () => {
+        expect(() => calculator.divide('10', 2)).toThrow('Os argumentos devem ser números'); // Testa divisão com string
+        expect(() => calculator.divide(10, '2')).toThrow('Os argumentos devem ser números'); // Testa divisão com string
+    });
 });

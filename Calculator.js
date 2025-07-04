@@ -27,6 +27,10 @@ class Calculator {
 
     // Divide o primeiro número pelo segundo e retorna o resultado
     divide(a, b) {
+        this.#validateInputs(a, b); // Valida os tipos dos argumentos
+        if (b === 0) {
+            throw new Error('Divisão por zero não é permitida');
+        }
         return a / b; // Retorna o resultado da divisão
     }
 }
