@@ -18,6 +18,11 @@ class Calculator {
         this.#validateInputs(a, b); // Valida os tipos dos argumentos
         return a - b; // Retorna a subtração de a por b
     }
+
+    // Multiplica dois números e retorna o resultado
+    multiply(a, b) {
+        return a * b; // Retorna o produto de a e b
+    }
 }
 
 // Exporta a classe para uso em outros arquivos
